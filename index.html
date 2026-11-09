@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NATA_STUDIO - Roblox Creator Tools</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0a0a12;color:white;text-align:center;padding:20px}
+.logo-banner img{width:180px;max-width:80%;border-radius:20px;margin:15px auto;display:block}
+h1{font-size:28px;margin:10px 0}
+h1 span{color:#00aaff}
+p{color:#aaa;margin-bottom:20px}
+.tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:20px 0}
+.tab{background:#1a1a2e;padding:12px 20px;border-radius:10px;cursor:pointer;border:1px solid #333}
+.tab.active{background:#00aaff;color:#000;font-weight:bold}
+.card{background:#151528;padding:20px;border-radius:15px;max-width:500px;margin:15px auto;text-align:left;border:1px solid #222}
+.card h3{margin-bottom:8px}
+.card p{font-size:14px;line-height:1.6}
+.price{font-size:22px;color:#00ff88;font-weight:bold;margin:10px 0}
+.btn{display:block;background:#00aaff;color:#000;text-align:center;padding:14px;border-radius:10px;font-weight:bold;text-decoration:none;margin-top:10px}
+.btn-green{background:#00ff88}
+input{width:100%;padding:12px;border-radius:10px;border:1px solid #333;background:#0a0a12;color:white;margin:10px 0}
+.hidden{display:none}
+</style>
+</head>
+<body>
+
+<div class="logo-banner">
+<img src="logo-nata.png" alt="NATA_STUDIO LOGO">
+</div>
+
+<h1>NATA<span>_STUDIO</span></h1>
+<p>Roblox Creator Tools • Premium • Terpercaya</p>
+
+<div class="tabs">
+<div class="tab active" onclick="showTab('home',this)">NATA_STUDIO</div>
+<div class="tab" onclick="showTab('paket',this)">PAKET & PREMIUM</div>
+<div class="tab" onclick="showTab('admin',this)">ADMIN DASHBOARD</div>
+</div>
+
+<div id="home">
+<div class="card">
+<h3>🧊 Selamat Datang di NATA_STUDIO</h3>
+<p>Tempatnya tools, script & kebutuhan Roblox Creator. Semua paket aman, fast respon, dan garansi.</p>
+<a class="btn" href="https://wa.me/6280000000000?text=Halo%20NATA_STUDIO,%20mau%20order">Chat WhatsApp Admin</a>
+</div>
+<div class="card">
+<h3>🔥 Kenapa Pilih Kami?</h3>
+<p>✅ Proses Cepat<br>✅ Harga Murah<br>✅ Support 24 Jam<br>✅ 100% Aman & Terpercaya</p>
+</div>
+</div>
+
+<div id="paket" class="hidden">
+<div class="card">
+<h3>📦 PAKET BASIC</h3>
+<p>• Script Basic<br>• Support Grup<br>• Update 1x</p>
+<div class="price">Rp 15.000</div>
+<a class="btn btn-green" href="https://wa.me/6280000000000?text=Mau%20order%20PAKET%20BASIC">Order BASIC</a>
+</div>
+<div class="card">
+<h3>💎 PAKET PREMIUM</h3>
+<p>• Semua Script Premium<br>• Support Prioritas<br>• Update Unlimited<br>• Akses VIP</p>
+<div class="price">Rp 50.000</div>
+<a class="btn btn-green" href="https://wa.me/6280000000000?text=Mau%20order%20PAKET%20PREMIUM">Order PREMIUM</a>
+</div>
+</div>
+
+<div id="admin" class="hidden">
+<div class="card">
+<h3>🔐 ADMIN DASHBOARD</h3>
+<p>Password: <b>nata123</b></p>
+<input type="password" id="pass" placeholder="Masukkan Password Admin">
+<a class="btn" href="#" onclick="loginAdmin()">Login Admin</a>
+<div id="adminPanel" class="hidden">
+<p style="margin-top:15px">✅ Login Berhasil Bree!<br><br>Total Order Hari Ini: 12<br>Total Member: 145<br>Saldo: Rp 750.000</p>
+</div>
+</div>
+</div>
+
+<script>
+function showTab(id,el){
+document.getElementById('home').classList.add('hidden');
+document.getElementById('paket').classList.add('hidden');
+document.getElementById('admin').classList.add('hidden');
+document.getElementById(id).classList.remove('hidden');
+document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+el.classList.add('active');
+}
+function loginAdmin(){
+if(document.getElementById('pass').value==='nata123'){
+document.getElementById('adminPanel').classList.remove('hidden');
+alert('Login Berhasil Bree!');
+}else{alert('Password Salah!');}
+}
+</script>
+</body>
+</html>
